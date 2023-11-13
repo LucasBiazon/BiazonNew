@@ -1,1 +1,6 @@
-1. Projeto
+1. Criar Header
+2. Criar outras páginas
+3. Criar Aside
+4. Criar FOOTER
+5. Criar menu de busca
+. Organizar cod

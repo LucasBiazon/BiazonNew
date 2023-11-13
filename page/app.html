@@ -14,7 +14,7 @@
         <nav id="navBar">
             <button id="navBarBtNoticias">
                 Notícias
-                <img src="../assets/images/maior_que_icon.png" alt=""/>
+                <img src="../assets/images/maior_que_icon.png" alt="" id="maiorque"/>
             </button><!--navBarBtNoticias-->
 
             <a href="" title="previsão meteorológica">
@@ -23,12 +23,38 @@
             <a href="" title="conversor de moedas">
                 Conversor de moedas
             </a>
+
             <form id="search">
                 <input type="text" name="inputSearch" id="inputSearch" placeholder="Buscar"/>
                 <Button id="btSearch">
                     <img src="../assets/images/search_icon.png" alt="" />
                 </Button>
             </form>
+
+            <table id="dropDown" class="desativado">
+                <tr>
+                    <td>
+                        <a href="">Popular articles</a>
+                    </td>
+                    <td>
+                        <a href="">Section articles</a>
+                    </td>
+                    <td>
+                        <a href="">Today articles</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="">Books</a>
+                    </td>
+                    <td>
+                        <a href="">Ações da bolsa</a>
+                    </td>
+                    <td>
+                        <a href="">Time Wire</a>
+                    </td>
+                </tr>
+            </table>
         </nav><!--NavBar-->
 
         <div class="icons">
@@ -49,10 +75,18 @@
             </div>
         </article>
         <aside> aqui vai outros links</aside>
+
+        <button id="subir">
+            <a href="#navBar">subir</a>
+        </button> 
     </main>
 
+    
+     
     <footer>
         aqui vai o rodapé
     </footer>
+
+    
 </body>
 </html>

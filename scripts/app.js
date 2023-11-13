@@ -1,12 +1,38 @@
 
-
 const key = 'gCfOWGoFb8lbmdRP8BpDsJGGRwqIfpVv';
 const articleNoticias = document.querySelector("#articleNoticias")
+const navBarBtNoticias = document.querySelector("#navBarBtNoticias")
+const search = document.querySelector("#search")
 
- document.addEventListener("DOMContentLoaded",  () => {
-    noticiasRelevantes()
+
+
+
+document.addEventListener("DOMContentLoaded",  async () => {
+     await noticiasRelevantes()
  })
- 
+
+// Menu DropDown
+navBarBtNoticias.addEventListener("click", () =>{
+    let dropDown = document.querySelector("#dropDown")
+    let maiorque = document.querySelector("#maiorque")
+
+    dropDown.classList.toggle("desativado")
+    maiorque.classList.toggle("btNoticia")
+
+    if(!dropDown.classList.contains("desativado")){
+        navBarBtNoticias.classList.add("menu-ativo")
+    }else{
+        navBarBtNoticias.classList.remove("menu-ativo")
+    }
+})
+
+
+
+search.addEventListener("submit", (event) =>{ 
+    event.preventDefault()
+    console.log("evento previnido")
+})
+//  Requisição de artigos relevantes para seção de mais relevantes
  async function noticiasRelevantes(){
     try{
         let response = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${key}`, { 
@@ -15,8 +41,7 @@ const articleNoticias = document.querySelector("#articleNoticias")
         let news = await response.json()
         news = news.results
         for(let index in news){
-            if(index != 10){
-                
+            if(index != 10){ 
                 let noticia = document.createElement("div")
                 let noticiaTexto = document.createElement("div")
                 let noticiaTitle = document.createElement("h2")
@@ -35,14 +60,8 @@ const articleNoticias = document.querySelector("#articleNoticias")
                 noticiaTexto.appendChild(noticiaDesc)
                 noticia.appendChild(noticiaTexto)
                 articleNoticias.appendChild(noticia)
-
-            
-            }else{
-                break
-            }
+            }else{ break }
         }
-           
-      
     }catch{
         console.error(`Download error: ${error.message}`); 
     }
