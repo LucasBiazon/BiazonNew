@@ -1,0 +1,105 @@
+@import url(../style/geral.css);
+
+header{
+    height: 3.75em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background-color: var(--cor_principal);
+    padding: 0 2%;
+    box-shadow: 0px 3px 3px 3px rgb(233, 233, 233);
+}
+
+header h1{
+    font-family: 'Julius Sans One', sans-serif;
+    color: var(--branco);
+    grid-area: "logo";
+}
+
+#navBar{
+    height: 100%;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#navBar a, button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.98rem;
+    color: #fdfcfce8;
+    text-decoration: none;
+}
+
+#navBar #navBarBtNoticias{
+    display: flex;
+    align-items: center;
+    gap:2px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+#navBar #navBarBtNoticias img{
+    height: 15px;
+    width: 15px;
+}
+
+#navBar #search{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 30px;
+}
+
+#navBar #search #inputSearch{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    padding: 2%;
+    color: var(--branco);
+}::placeholder{
+    color: var(--branco);
+    opacity: 0.5;
+}
+
+#navBar #search #btSearch{
+    width: 30px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#navBar #search #btSearch img{
+    height: 25px;
+    width: 25px;
+}
+
+#navBar #search::after{
+    content: "";
+    height: 1px;
+    padding: 0 2%;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--branco);
+    opacity: 0.5;
+}
+
+.icons{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icons a img{
+     height: 40px;
+     width: 40px;
+}
