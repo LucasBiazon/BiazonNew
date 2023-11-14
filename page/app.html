@@ -9,7 +9,7 @@
     <title>Biazon News</title>
 </head>
 <body>
-    <header class="Flex Flex-ai">
+    <header id="headerPrincipal" class="Flex Flex-ai">
         <h1>Biazon News</h1>
 
         <nav id="navBar" class="Flex Flex-ai H100">
@@ -28,7 +28,10 @@
             </a>
 
             <form id="search" class="Flex Flex-ai H50">
-                <input type="text" name="inputSearch" id="inputSearch" placeholder="Buscar"/>
+                <div>
+                    <input type="text" name="inputSearch" id="inputSearch" placeholder="Buscar"/>
+                    <hr>
+                </div>
                 <Button id="btSearch">
                     <img src="../assets/images/search_icon.png" alt="" />
                 </Button>
@@ -71,7 +74,19 @@
     </header><!--Header-->
 
     <main>
-        
+        <header id="headerNoticia" class="Flex">
+            <div id="newsFirst">
+                <h2 id="title1">Title</h2>
+            </div>
+            <div id="noticiasSecundarias" class="Flex">
+                <div id="newsSecond">
+                    oi
+                </div>
+                <div id="newsThird">
+                    
+                </div>
+            </div>
+        </header>
         <article class="Flex">
             <h1>Notícias mais relevantes!</h1>
             <div id="articleNoticias" class="Flex">

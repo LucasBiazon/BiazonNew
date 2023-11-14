@@ -2,9 +2,28 @@ const key = 'gCfOWGoFb8lbmdRP8BpDsJGGRwqIfpVv';
 const articleNoticias = document.querySelector("#articleNoticias")
 const navBarBtNoticias = document.querySelector("#navBarBtNoticias")
 const search = document.querySelector("#search")
+const searchInput = document.querySelector("#inputSearch")
+let verticalScroll = document.documentElement.scrollTop
+
+document.addEventListener("scroll", () => {
+    let verticalScroll = document.documentElement.scrollTop
+    console.log(verticalScroll)
+    const headerPrincipal = document.querySelector("#headerPrincipal")
+    if(verticalScroll >= 150){
+        headerPrincipal.classList.add("sticky")
+    }else(
+        headerPrincipal.classList.remove("sticky")
+    )
+})
 
 
-
+searchInput.addEventListener("focusin", () => {
+   document.querySelector("#search hr").style.opacity = "1"
+}) 
+searchInput.addEventListener("blur", () => {
+    document.querySelector("#search hr").style.opacity = "0.5"
+ })
+ 
 
 document.addEventListener("DOMContentLoaded", async () => {
        newsRelevantes()
@@ -29,7 +48,10 @@ navBarBtNoticias.addEventListener("click", () =>{
 
 search.addEventListener("submit", (event) =>{ 
     event.preventDefault()
-    console.log("evento previnido")
+    let busca = searchInput.value
+    console.log(busca)
+    // history.pushState(null, null, busca);
+    window.location.href = busca
 })
 
 
@@ -41,6 +63,11 @@ search.addEventListener("submit", (event) =>{
         })  
         let news = await response.json()
         news = news.results
+
+        let noticia1 = document.querySelector("#newsFirst")
+        noticia1.style.backgroundImage = `url(${news[0].multimedia[0].url})`
+        let title1 = document.querySelector("#title1")
+        title1.innerHTML = `${news[0].title}`
         for(let index in news){
             if(index != 10){ 
                 let noticia = document.createElement("div")
