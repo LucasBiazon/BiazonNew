@@ -19,12 +19,10 @@ document.addEventListener("scroll", () => {
     )
 })
 
-searchInput.addEventListener("focusin", () => {
-   document.querySelector("#search hr").style.opacity = "1"
-})
-searchInput.addEventListener("blur", () => {
-    document.querySelector("#search hr").style.opacity = "0.5"
- })
+searchInput.addEventListener("focusin", () => document.querySelector("#search hr").style.opacity = "1" )
+
+searchInput.addEventListener("blur", () => document.querySelector("#search hr").style.opacity = "0.5" )
+
 
 
 // Menu DropDown
@@ -57,6 +55,7 @@ search.addEventListener("submit", (event) =>{
             method: "GET"
         })  
         let news = await response.json()
+        console.log(news)
         news = news.results
         console.log(news)
         NoticiaRelevantes(news)
@@ -68,7 +67,7 @@ search.addEventListener("submit", (event) =>{
 function NoticiaRelevantes(news){
     for(let index in news)
         {
-        if(index != 10)
+        if(index != 15)
         { 
             if(index == 0)
             {
