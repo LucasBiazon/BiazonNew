@@ -1,14 +1,32 @@
 @import url(../style/geral.css);
 
+/* Styles Compartilhados */
+header, main, #articleNoticias{
+    width: 100%;
+}
+
+.noticia, .noticiaTexto{
+    display: flex;
+}
+
+
+
+article, #articleNoticias, .noticiaTexto{
+    flex-direction: column;
+}
+
+#navBar a, button, article h1, #articleNoticias .noticia .noticiaTexto h2,
+#articleNoticias .noticia .noticiaTexto p{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 header{
     height: 3.75em;
-    width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 60px;
     background-color: var(--cor_principal);
-    padding: 0 2%;
+    padding: 0 4%;
     box-shadow: 0px 3px 3px 3px rgb(233, 233, 233);
 }
 
@@ -19,16 +37,12 @@ header h1{
 }
 
 #navBar{
-    height: 100%;
     min-width: 500px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    gap: var(--gap);
     position: relative;
 }
 
 #navBar a, button{
-    font-family: 'Roboto', sans-serif;
     font-size: 0.98rem;
     color: #fdfcfce8;
     text-decoration: none;
@@ -36,8 +50,6 @@ header h1{
 }
 
 #navBar #navBarBtNoticias{
-    display: flex;
-    align-items: center;
     gap:2px;
     background-color: transparent;
     border: 0;
@@ -52,9 +64,6 @@ header h1{
 }
 
 #navBar #search{
-    height: 50%;
-    display: flex;
-    align-items: center;
     position: relative;
     margin-left: 30px;
 }
@@ -95,9 +104,6 @@ header h1{
 }
 
 .icons{
-    height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
     gap: 30px;
 }
@@ -115,7 +121,7 @@ header h1{
     left: 0;
     z-index: 10;
     background-color: var(--branco);
-    border-left: 3px var(--cor_principal) solid;
+    border-left: 6px var(--cor_principal) solid;
     border-radius: 0px 0px 10px 10px;
     padding: 1%;
     box-shadow: 3px 3px 3px 2px rgba(197, 196, 196, 0.829);
@@ -128,83 +134,78 @@ header h1{
     color: var(--preto);
 }
 main{
-    width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 2%;
-    gap: 30px;
+    grid-template-columns: 65% 35%;
+    padding: 2% 4%;
+    gap: 15px;
     position: relative;
 }
 
 article{
     height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+     gap: 20px;
 }
 
 article h1{
-    font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
     color: var(--preto);
 }
 
 #articleNoticias{
-    display: flex;
-    flex-direction: column;
     height: auto;
-    width: 100%;
 }
 
-.noticia{
+#articleNoticias .noticia{
+    justify-content: left;
+    align-items: center;
     height: 200px;
-    width: 100%;
-    display: flex;
+    width: 90%;
     gap: 30px;
     cursor: pointer;
     position: relative;
 }
 
-.noticia::after{
+#articleNoticias .noticia::after{
     content: "";
     height: 2px;
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 0px;
     background-color: var(--cor_principal);
 }
-.noticia img{
+#articleNoticias .noticia img{
     height: 150px;
     max-height: 150px;
     min-height: 150px;
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px;
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
     border-radius: 20px;
 }
 
-.noticiaTexto{
-    display: flex;
-    flex-direction: column;
+#articleNoticias .noticia .noticiaTexto{
     gap:15px;
+   
 }
 
-.noticiaTexto h2{
-    font-family: 'Roboto', sans-serif;
-    color: var(--cor_principal);
-    text-align:start;
+#articleNoticias .noticia .noticiaTexto h2{
+    font-size: 1.4rem;
+    color: var(--cor_principal);  
 }
 
-.noticiaTexto p{
-    font-family: 'Roboto', sans-serif;
+#articleNoticias .noticia .noticiaTexto p{
+    font-size: 0.85rem;
     color: var(--preto);
     text-align:justify;
     max-width: 500px;
     opacity: 0.9;
 }
 
+aside{
+    background-color: aqua;
+}
 
 
 footer{
@@ -212,11 +213,13 @@ footer{
     background-color: var(--cor_principal);
 }
 
+/* CSS and JS */
+
 .desativado{
     display: none;
 }
 
-.btNoticia{
+.btNoticiaAtivado{
     transform: rotate(90deg);
 }
 
@@ -224,6 +227,7 @@ footer{
     color: #fdfcfc;
     opacity: 1;
 }
+
 /* Hover and animation */
 
 #navBar > a:hover, button:hover{
@@ -241,10 +245,4 @@ footer{
     100% {height: 100px;}
 }
 
-#subir{
-    background-color: #fdfcfc;
-    color: black;
-    bottom: 0px;
-    right:  0px;
-    width: 40px;
-}
+

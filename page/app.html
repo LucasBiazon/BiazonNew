@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/app.css">
     <script src="../scripts/app.js" defer></script>
     <title>Biazon News</title>
 </head>
 <body>
-    <header>
+    <header class="Flex Flex-ai">
         <h1>Biazon News</h1>
 
-        <nav id="navBar">
-            <button id="navBarBtNoticias">
-                Notícias
-                <img src="../assets/images/maior_que_icon.png" alt="" id="maiorque"/>
+        <nav id="navBar" class="Flex Flex-ai H100">
+            <button id="navBarBtNoticias" 
+            class="Flex Flex-ai">
+                    Notícias
+                    <img src="../assets/images/maior_que_icon.png" alt="" id="maiorque"/>
             </button><!--navBarBtNoticias-->
 
             <a href="" title="previsão meteorológica">
                 Previsão meteorológica
             </a>
+
             <a href="" title="conversor de moedas">
                 Conversor de moedas
             </a>
 
-            <form id="search">
+            <form id="search" class="Flex Flex-ai H50">
                 <input type="text" name="inputSearch" id="inputSearch" placeholder="Buscar"/>
                 <Button id="btSearch">
                     <img src="../assets/images/search_icon.png" alt="" />
                 </Button>
-            </form>
+            </form><!--Search-->
 
             <table id="dropDown" class="desativado">
                 <tr>
@@ -57,7 +60,7 @@
             </table>
         </nav><!--NavBar-->
 
-        <div class="icons">
+        <div class="icons Flex Flex-ai H100">
             <a href="https://github.com/LucasBiazon" target="_blank" title="github">
                 <img src="../assets/images/github_icon.png"/>
             </a>
@@ -68,17 +71,19 @@
     </header><!--Header-->
 
     <main>
-        <article>
+        
+        <article class="Flex">
             <h1>Notícias mais relevantes!</h1>
-            <div id="articleNoticias">
+            <div id="articleNoticias" class="Flex">
                 <!-- Conteúdo inserido via js -->
             </div>
         </article>
-        <aside> aqui vai outros links</aside>
 
-        <button id="subir">
-            <a href="#navBar">subir</a>
-        </button> 
+        <aside> 
+            aqui vai outros links
+        </aside>
+
+        
     </main>
 
     
