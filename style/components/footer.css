@@ -1,0 +1,6 @@
+@import url(../geral.css);
+
+footer{
+    height: 20%;
+    background-color: var(--cor_principal);
+}

@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/geral.css">
     <link rel="stylesheet" href="../style/app.css">
+    <link rel="stylesheet" href="../style/components/navBar.css">
+    <link rel="stylesheet" href="../style/components/footer.css">
     <script src="../scripts/app.js" defer></script>
+    <script src="../scripts/components/navBar.js" defer></script>
     <title>Biazon News</title>
 </head>
 <body>
@@ -78,11 +82,11 @@
             <div id="newsFirst">
                 <h2 id="title1">Title</h2>
             </div>
-            <div id="noticiasSecundarias" class="Flex">
-                <div id="newsSecond">
+            <div id="newsSecond" class="Flex">
+                <div id="newsSecond1">
                     <h2 id="title2">Title</h2>
                 </div>
-                <div id="newsThird">
+                <div id="newsSecond2">
                     <h2 id="title3">Title</h2>
                 </div>
             </div>
@@ -95,14 +99,30 @@
         </article>
 
         <aside> 
-            aqui vai outros links
-        </aside>
 
-        
+            <section class=" asideArticle">
+                <h1>Popular News</h1>
+                <hr>
+                <div id="PArticle">
+                </div>
+            </section>
+            
+            <section class=" asideArticle">
+                <h1>Real Time News</h1>
+                <hr>
+                <div id="TArticle">
+                </div>
+            </section>
+
+            <section class=" asideArticle">
+                <h1>Science News</h1>
+                <hr>
+                <div id="scienceArticle">
+                </div>
+            </section>
+        </aside>
     </main>
 
-    
-     
     <footer>
         aqui vai o rodapé
     </footer>

@@ -32,3 +32,6 @@ body{
 .H100 { height: 100%;}
 .H50 { height: 50%;}
 
+.desativado{
+    display: none;
+}
