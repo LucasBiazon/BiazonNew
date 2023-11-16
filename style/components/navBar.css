@@ -12,7 +12,6 @@
 #headerPrincipal h1{
     font-family: 'Julius Sans One', sans-serif;
     color: var(--branco);
-    grid-area: "logo";
 }
 #navBar{
     min-width: 500px;

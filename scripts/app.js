@@ -121,7 +121,7 @@ function CreationNewsAside(limite, typeArticle, variavelLocal){
                 list.classList.add("asideNotice")
                 listPosition.classList.add("asideNoticeItemH2")
                 listItem.classList.add("asideNoticeItem")
-
+            
                 link.setAttribute('href', `../page/article.html?uri=${typeArticle[index].uri}`)
                 listPosition.innerHTML= indexText.toString()
                 listItem.innerHTML = `${typeArticle[index].title}`

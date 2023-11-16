@@ -1,6 +1,43 @@
 @import url(../geral.css);
 
+
+ footer ul li, footer p{
+    font-family: 'Roboto', sans-serif;
+}
+
+footer h1, footer div ul li a, footer p{
+    color: var(--branco);
+}
+
 footer{
+    justify-content: space-between;
     height: 20%;
     background-color: var(--cor_principal);
+    padding: 2% 4%;
+}
+
+footer .footerDivOne{
+    height: 100%;
+    flex-direction: column;
+    gap:10px;
+    width: 70%;
+    border-right: 3px solid var(--branco);
+}
+footer h1{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+footer ul{
+    list-style: none;
+    gap: 10px;
+}
+
+.iconsFooter{
+    justify-content: center;
+    gap: 60px;
+}
+
+.iconsFooter img{
+    height: 60px;
+    width: 60px;
 }

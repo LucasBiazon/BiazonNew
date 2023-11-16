@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/geral.css">
-    <link rel="stylesheet" href="../style/app.css">
-    <link rel="stylesheet" href="../style/components/navBar.css">
     <link rel="stylesheet" href="../style/components/footer.css">
+    <link rel="stylesheet" href="../style/components/navBar.css">
     <link rel="stylesheet" href="../style/components/noticias.css">
-    <script src="../scripts/app.js" defer></script>
     <script src="../scripts/components/navBar.js" defer></script>
-    <title>Biazon News</title>
+    <script src="../scripts/articlePopular.js" defer></script>
+    <title>Artigos Populares</title>
 </head>
 <body>
     <header id="headerPrincipal" class="Flex Flex-ai">
@@ -79,49 +76,9 @@
     </header><!--Header-->
 
     <main>
-        <header id="headerNoticia" class="Flex">
-            <div id="newsFirst">
-                <h2 id="title1">Title</h2>
-            </div>
-            <div id="newsSecond" class="Flex">
-                <div id="newsSecond1">
-                    <h2 id="title2">Title</h2>
-                </div>
-                <div id="newsSecond2">
-                    <h2 id="title3">Title</h2>
-                </div>
-            </div>
-        </header>
-        <article class="Flex">
-            <h1>Notícias mais relevantes!</h1>
-            <div id="articleNoticias" class="Flex">
-                <!-- Conteúdo inserido via js -->
-            </div>
-        </article>
+        <section id="articleNoticias">
 
-        <aside> 
-
-            <section class=" asideArticle">
-                <h1>Popular News</h1>
-                <hr>
-                <div id="PArticle">
-                </div>
-            </section>
-            
-            <section class=" asideArticle">
-                <h1>Real Time News</h1>
-                <hr>
-                <div id="TArticle">
-                </div>
-            </section>
-
-            <section class=" asideArticle">
-                <h1>Science News</h1>
-                <hr>
-                <div id="scienceArticle">
-                </div>
-            </section>
-        </aside>
+        </section>
     </main>
 
     <footer class="Flex Flex-ai">
@@ -144,6 +101,5 @@
         </div><!--Icons-->
     </footer>
 
-    
 </body>
 </html>

@@ -100,56 +100,9 @@ article h1{
     font-size: 2.2rem;
     color: var(--preto);
 }
-
-#articleNoticias{
-    height: auto;
-}
-
-#articleNoticias .noticia{
-    justify-content: left;
-    align-items: center;
-    height: 200px;
-    width: 90%;
-    gap: 30px;
-    cursor: pointer;
-    position: relative;
-}
-
-#articleNoticias .noticia::after{
-    content: "";
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
-    background-color: var(--cor_principal);
-}
-#articleNoticias .noticia img{
-    height: 150px;
-    max-height: 150px;
-    min-height: 150px;
-    width: 250px;
-    max-width: 250px;
-    min-width: 250px;
-    border-radius: 20px;
-}
-
-#articleNoticias .noticia .noticiaTexto{
-    gap:15px;
-   
-}
-
-#articleNoticias .noticia .noticiaTexto h2{
-    font-size: 1.4rem;
-    color: var(--cor_principal);  
-}
-
-#articleNoticias .noticia .noticiaTexto p{
-    font-size: 0.85rem;
-    color: var(--preto);
-    text-align:justify;
-    max-width: 500px;
-    opacity: 0.9;
+ 
+article *{
+    text-decoration: none;
 }
 
 aside{
@@ -167,15 +120,18 @@ aside{
     border: 3px solid rgb(236, 236, 236);
 }
 
-.asideArticle > h1{
+.asideArticle a{
+    text-decoration: none;
+    padding-top: 5%;
+}
+.asideArticle  h1{
     padding: 1%;
 }
 .asideNotice{
-    padding-top: 5%;
     list-style: none;
     display: flex;
     flex-direction: column;
-  
+    
 }
 
 .asideNoticeItem{
@@ -184,7 +140,6 @@ aside{
     align-items: center;
     justify-content: left;
     flex-direction: row-reverse;
-    cursor: pointer;
 }
 
 .asideNoticeItem {
